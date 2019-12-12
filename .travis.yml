@@ -3,7 +3,7 @@ services:
   - docker
 
 before_install:
-  - docker build -t lumpa7223/react-test -f client/Dockerfile.dev .
+  - docker build -t lumpa7223/react-test -f client/Dockerfile.dev ./client
 
 script:
   - docker run -e CI=ture lumpa7223/react-test yarn test
